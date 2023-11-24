@@ -1,0 +1,70 @@
+# README
+
+## Music Library Management System
+
+This Java program is a simple Music Library Management System that allows users to perform various operations on a music library, including searching for songs, podcasts, and playlists, managing playback status, and more. The program uses JSON files for input and output and is designed to be run through a command line.
+
+### Table of Contents
+1. [Features](#features)
+2. [Usage](#usage)
+3. [File Structure](#file-structure)
+4. [Dependencies](#dependencies)
+5. [How to Run](#how-to-run)
+6. [Contributing](#contributing)
+7. [License](#license)
+
+### Features <a name="features"></a>
+
+- **Search Functionality:** Allows users to search for songs, podcasts, and playlists based on various criteria such as name, owner, tags, and more.
+
+- **Playback Control:** Users can control playback functions, including play/pause, repeat, shuffle, and view the current status of the music library.
+
+- **Library Management:** Manages a library of songs, podcasts, and playlists with features like sorting and filtering.
+
+- **Command Line Interface:** The program is designed to be run through the command line, taking input from JSON files and providing output in JSON format.
+
+### Usage <a name="usage"></a>
+
+To use this Music Library Management System, follow these steps:
+
+1. **Input Files:**
+   - Create JSON files with the necessary input data. Example input files can be found in the `input/` directory.
+
+2. **Run the Program:**
+   - Execute the `Main` class, which serves as the entry point. The program will read input files, perform operations, and generate output files.
+
+3. **Output Files:**
+   - Check the `output/` directory for the generated JSON output files corresponding to each input file.
+
+### File Structure <a name="file-structure"></a>
+
+- **Main.java:** Entry point of the program. It contains the main method and orchestrates the execution of the music library operations.
+
+- **LibraryInput.java:** Represents the structure of the input JSON file for the music library.
+
+- **Library.java:** Represents the main data structure for the music library, including songs, podcasts, and playlists.
+
+- **SearchbarDTO.java:** Data Transfer Object (DTO) for representing search queries and commands.
+
+- **Playlist.java, Podcast.java, Song.java:** Classes representing playlists, podcasts, and songs with methods for filtering and sorting.
+
+- **Checker.java, CheckerConstants.java:** Classes related to the testing and scoring of the implementation.
+
+### Dependencies <a name="dependencies"></a>
+
+- **Jackson Library:** This program uses the Jackson library for reading and writing JSON files.
+
+### How to Run <a name="how-to-run"></a>
+
+1. Clone the repository to your local machine.
+2. Open the project in your preferred Java development environment.
+3. Ensure that the Jackson library is available in your classpath.
+4. Run the `Main` class with appropriate input files in the `input/` directory.
+
+### Contributing <a name="contributing"></a>
+
+Contributions to this project are welcome. If you find issues or have suggestions for improvements, please open an issue or submit a pull request.
+
+### License <a name="license"></a>
+
+This Music Library Management System is released under the [MIT License](LICENSE). Feel free to use, modify, and distribute the code as per the terms of the license.

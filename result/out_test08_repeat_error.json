@@ -1,27 +1,198 @@
 [ {
   "command" : "search",
-  "user" : "alice22",
-  "timestamp" : 10,
-  "message" : "Search returned 1 results",
-  "results" : [ "Shape of You" ]
+  "user" : "emily30",
+  "timestamp" : 1000,
+  "message" : "Search returned 4 results",
+  "results" : [ "The Unforgiven", "Sad But True", "Nothing Else Matters", "Enter Sandman" ]
+}, {
+  "command" : "repeat",
+  "user" : "emily30",
+  "timestamp" : 1035,
+  "message" : "Repeat mode changed to repeat once."
 }, {
   "command" : "select",
-  "user" : "alice22",
-  "timestamp" : 15,
-  "message" : "Successfully selected Shape of You."
+  "user" : "emily30",
+  "timestamp" : 1100,
+  "message" : "Successfully selected The Unforgiven."
 }, {
   "command" : "load",
-  "user" : "alice22",
-  "timestamp" : 20,
+  "user" : "emily30",
+  "timestamp" : 1120,
   "message" : "Playback loaded successfully."
 }, {
-  "command" : "playPause",
-  "user" : "alice22",
-  "timestamp" : 30,
-  "message" : "Playback paused successfully."
+  "command" : "status",
+  "user" : "emily30",
+  "timestamp" : 1190,
+  "stats" : {
+    "name" : "The Unforgiven",
+    "remainedTime" : 233,
+    "repeat" : "Repeat Once",
+    "shuffle" : false,
+    "paused" : true
+  }
 }, {
-  "command" : "playPause",
-  "user" : "alice22",
-  "timestamp" : 45,
-  "message" : "Playback resumed successfully."
+  "command" : "repeat",
+  "user" : "emily30",
+  "timestamp" : 1191,
+  "message" : "Repeat mode changed to repeat infinite."
+}, {
+  "command" : "repeat",
+  "user" : "emily30",
+  "timestamp" : 1192,
+  "message" : "Repeat mode changed to no repeat."
+}, {
+  "command" : "repeat",
+  "user" : "emily30",
+  "timestamp" : 2000,
+  "message" : "Repeat mode changed to repeat once."
+}, {
+  "command" : "status",
+  "user" : "emily30",
+  "timestamp" : 2100,
+  "stats" : {
+    "name" : "The Unforgiven",
+    "remainedTime" : 233,
+    "repeat" : "Repeat Once",
+    "shuffle" : false,
+    "paused" : true
+  }
+}, {
+  "command" : "repeat",
+  "user" : "emily30",
+  "timestamp" : 2135,
+  "message" : "Repeat mode changed to repeat infinite."
+}, {
+  "command" : "status",
+  "user" : "emily30",
+  "timestamp" : 2200,
+  "stats" : {
+    "name" : "The Unforgiven",
+    "remainedTime" : 233,
+    "repeat" : "Repeat infinite",
+    "shuffle" : false,
+    "paused" : true
+  }
+}, {
+  "command" : "search",
+  "user" : "emily30",
+  "timestamp" : 2245,
+  "message" : "Search returned 0 results",
+  "results" : [ ]
+}, {
+  "command" : "repeat",
+  "user" : "emily30",
+  "timestamp" : 2290,
+  "message" : "Please load a source before setting the repeat status."
+}, {
+  "command" : "load",
+  "user" : "emily30",
+  "timestamp" : 3000,
+  "message" : "Please select a source before attempting to load."
+}, {
+  "command" : "status",
+  "user" : "emily30",
+  "timestamp" : 3100,
+  "stats" : {
+    "name" : "The Unforgiven",
+    "remainedTime" : 233,
+    "repeat" : "Repeat infinite",
+    "shuffle" : false,
+    "paused" : true
+  }
+}, {
+  "command" : "search",
+  "user" : "emily30",
+  "timestamp" : 3170,
+  "message" : "Search returned 1 results",
+  "results" : [ "99 Problems" ]
+}, {
+  "command" : "select",
+  "user" : "emily30",
+  "timestamp" : 3190,
+  "message" : "Successfully selected 99 Problems."
+}, {
+  "command" : "load",
+  "user" : "emily30",
+  "timestamp" : 3195,
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "repeat",
+  "user" : "emily30",
+  "timestamp" : 3200,
+  "message" : "Repeat mode changed to no repeat."
+}, {
+  "command" : "status",
+  "user" : "emily30",
+  "timestamp" : 3220,
+  "stats" : {
+    "name" : "99 Problems",
+    "remainedTime" : 233,
+    "repeat" : "No Repeat",
+    "shuffle" : false,
+    "paused" : true
+  }
+}, {
+  "command" : "search",
+  "user" : "emily30",
+  "timestamp" : 3260,
+  "message" : "Search returned 0 results",
+  "results" : [ ]
+}, {
+  "command" : "repeat",
+  "user" : "emily30",
+  "timestamp" : 3270,
+  "message" : "Please load a source before setting the repeat status."
+}, {
+  "command" : "select",
+  "user" : "emily30",
+  "timestamp" : 3290,
+  "message" : "Please conduct a search before making a selection."
+}, {
+  "command" : "repeat",
+  "user" : "emily30",
+  "timestamp" : 3295,
+  "message" : "Please load a source before setting the repeat status."
+}, {
+  "command" : "status",
+  "user" : "emily30",
+  "timestamp" : 3310,
+  "stats" : {
+    "name" : "99 Problems",
+    "remainedTime" : 233,
+    "repeat" : "No Repeat",
+    "shuffle" : false,
+    "paused" : true
+  }
+}, {
+  "command" : "repeat",
+  "user" : "emily30",
+  "timestamp" : 3335,
+  "message" : "Please load a source before setting the repeat status."
+}, {
+  "command" : "status",
+  "user" : "emily30",
+  "timestamp" : 3400,
+  "stats" : {
+    "name" : "99 Problems",
+    "remainedTime" : 233,
+    "repeat" : "No Repeat",
+    "shuffle" : false,
+    "paused" : true
+  }
+}, {
+  "command" : "repeat",
+  "user" : "emily30",
+  "timestamp" : 3435,
+  "message" : "Please load a source before setting the repeat status."
+}, {
+  "command" : "status",
+  "user" : "emily30",
+  "timestamp" : 3450,
+  "stats" : {
+    "name" : "99 Problems",
+    "remainedTime" : 233,
+    "repeat" : "No Repeat",
+    "shuffle" : false,
+    "paused" : true
+  }
 } ]

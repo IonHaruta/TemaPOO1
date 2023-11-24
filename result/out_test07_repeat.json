@@ -3,25 +3,262 @@
   "user" : "alice22",
   "timestamp" : 10,
   "message" : "Search returned 1 results",
-  "results" : [ "Shape of You" ]
+  "results" : [ "Dream Chaser" ]
 }, {
   "command" : "select",
   "user" : "alice22",
   "timestamp" : 15,
-  "message" : "Successfully selected Shape of You."
+  "message" : "Successfully selected Dream Chaser."
 }, {
   "command" : "load",
   "user" : "alice22",
   "timestamp" : 20,
   "message" : "Playback loaded successfully."
 }, {
-  "command" : "playPause",
+  "command" : "status",
   "user" : "alice22",
   "timestamp" : 30,
-  "message" : "Playback paused successfully."
+  "stats" : {
+    "name" : "Dream Chaser",
+    "remainedTime" : 223,
+    "repeat" : "No Repeat",
+    "shuffle" : false,
+    "paused" : false
+  }
 }, {
-  "command" : "playPause",
+  "command" : "repeat",
   "user" : "alice22",
-  "timestamp" : 45,
-  "message" : "Playback resumed successfully."
+  "timestamp" : 31,
+  "message" : "Repeat mode changed to repeat once."
+}, {
+  "command" : "status",
+  "user" : "alice22",
+  "timestamp" : 32,
+  "stats" : {
+    "name" : "Dream Chaser",
+    "remainedTime" : 211,
+    "repeat" : "Repeat Once",
+    "shuffle" : false,
+    "paused" : false
+  }
+}, {
+  "command" : "status",
+  "user" : "alice22",
+  "timestamp" : 257,
+  "stats" : {
+    "name" : "",
+    "remainedTime" : 0,
+    "repeat" : "No Repeat",
+    "shuffle" : false,
+    "paused" : true
+  }
+}, {
+  "command" : "repeat",
+  "user" : "alice22",
+  "timestamp" : 258,
+  "message" : "Repeat mode changed to repeat infinite."
+}, {
+  "command" : "repeat",
+  "user" : "alice22",
+  "timestamp" : 258,
+  "message" : "Repeat mode changed to no repeat."
+}, {
+  "command" : "status",
+  "user" : "alice22",
+  "timestamp" : 1000,
+  "stats" : {
+    "name" : "",
+    "remainedTime" : 0,
+    "repeat" : "No Repeat",
+    "shuffle" : false,
+    "paused" : true
+  }
+}, {
+  "command" : "search",
+  "user" : "alice22",
+  "timestamp" : 1006,
+  "message" : "Search returned 1 results",
+  "results" : [ "99 Problems" ]
+}, {
+  "command" : "select",
+  "user" : "alice22",
+  "timestamp" : 1007,
+  "message" : "Successfully selected 99 Problems."
+}, {
+  "command" : "load",
+  "user" : "alice22",
+  "timestamp" : 1008,
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "user" : "alice22",
+  "timestamp" : 1010,
+  "message" : "Search returned 1 results",
+  "results" : [ "Hustle Hard" ]
+}, {
+  "command" : "select",
+  "user" : "alice22",
+  "timestamp" : 1011,
+  "message" : "Successfully selected Hustle Hard."
+}, {
+  "command" : "load",
+  "user" : "alice22",
+  "timestamp" : 1012,
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "user" : "alice22",
+  "timestamp" : 1014,
+  "message" : "Search returned 1 results",
+  "results" : [ "Butterfly Effect" ]
+}, {
+  "command" : "select",
+  "user" : "alice22",
+  "timestamp" : 1015,
+  "message" : "Successfully selected Butterfly Effect."
+}, {
+  "command" : "load",
+  "user" : "alice22",
+  "timestamp" : 1016,
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "user" : "alice22",
+  "timestamp" : 1018,
+  "message" : "Search returned 1 results",
+  "results" : [ "Moves Like Jagger" ]
+}, {
+  "command" : "select",
+  "user" : "alice22",
+  "timestamp" : 1019,
+  "message" : "Successfully selected Moves Like Jagger."
+}, {
+  "command" : "load",
+  "user" : "alice22",
+  "timestamp" : 1020,
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "user" : "alice22",
+  "timestamp" : 1022,
+  "message" : "Search returned 1 results",
+  "results" : [ "Dream Chaser" ]
+}, {
+  "command" : "select",
+  "user" : "alice22",
+  "timestamp" : 1023,
+  "message" : "Successfully selected Dream Chaser."
+}, {
+  "command" : "load",
+  "user" : "alice22",
+  "timestamp" : 1024,
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "user" : "alice22",
+  "timestamp" : 1026,
+  "message" : "Search returned 0 results",
+  "results" : [ ]
+}, {
+  "command" : "select",
+  "user" : "alice22",
+  "timestamp" : 1027,
+  "message" : "Please conduct a search before making a selection."
+}, {
+  "command" : "load",
+  "user" : "alice22",
+  "timestamp" : 1028,
+  "message" : "Please select a source before attempting to load."
+}, {
+  "command" : "status",
+  "user" : "alice22",
+  "timestamp" : 1035,
+  "stats" : {
+    "name" : "Dream Chaser",
+    "remainedTime" : 222,
+    "repeat" : "No Repeat",
+    "shuffle" : false,
+    "paused" : false
+  }
+}, {
+  "command" : "repeat",
+  "user" : "alice22",
+  "timestamp" : 1036,
+  "message" : "Please load a source before setting the repeat status."
+}, {
+  "command" : "status",
+  "user" : "alice22",
+  "timestamp" : 1037,
+  "stats" : {
+    "name" : "Dream Chaser",
+    "remainedTime" : 209,
+    "repeat" : "No Repeat",
+    "shuffle" : false,
+    "paused" : false
+  }
+}, {
+  "command" : "status",
+  "user" : "alice22",
+  "timestamp" : 2099,
+  "stats" : {
+    "name" : "",
+    "remainedTime" : 0,
+    "repeat" : "No Repeat",
+    "shuffle" : false,
+    "paused" : true
+  }
+}, {
+  "command" : "repeat",
+  "user" : "alice22",
+  "timestamp" : 2100,
+  "message" : "Please load a source before setting the repeat status."
+}, {
+  "command" : "status",
+  "user" : "alice22",
+  "timestamp" : 2101,
+  "stats" : {
+    "name" : "",
+    "remainedTime" : 0,
+    "repeat" : "No Repeat",
+    "shuffle" : false,
+    "paused" : true
+  }
+}, {
+  "command" : "status",
+  "user" : "alice22",
+  "timestamp" : 2334,
+  "stats" : {
+    "name" : "",
+    "remainedTime" : 0,
+    "repeat" : "No Repeat",
+    "shuffle" : false,
+    "paused" : true
+  }
+}, {
+  "command" : "repeat",
+  "user" : "alice22",
+  "timestamp" : 2335,
+  "message" : "Please load a source before setting the repeat status."
+}, {
+  "command" : "status",
+  "user" : "alice22",
+  "timestamp" : 2336,
+  "stats" : {
+    "name" : "",
+    "remainedTime" : 0,
+    "repeat" : "No Repeat",
+    "shuffle" : false,
+    "paused" : true
+  }
+}, {
+  "command" : "status",
+  "user" : "alice22",
+  "timestamp" : 3600,
+  "stats" : {
+    "name" : "",
+    "remainedTime" : 0,
+    "repeat" : "No Repeat",
+    "shuffle" : false,
+    "paused" : true
+  }
 } ]

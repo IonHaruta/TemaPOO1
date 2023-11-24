@@ -2,7 +2,7 @@ package myfiles;
 
 import java.util.ArrayList;
 
-public class FilterDTO {
+public final class FilterDTO {
     private String name;
     private String album;
     private ArrayList<String> tags;
@@ -16,7 +16,7 @@ public class FilterDTO {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(final String name) {
         this.name = name;
     }
 
@@ -24,7 +24,7 @@ public class FilterDTO {
         return album;
     }
 
-    public void setAlbum(String album) {
+    public void setAlbum(final String album) {
         this.album = album;
     }
 
@@ -32,7 +32,7 @@ public class FilterDTO {
         return tags;
     }
 
-    public void setTags(ArrayList<String> tags) {
+    public void setTags(final ArrayList<String> tags) {
         this.tags = tags;
     }
 
@@ -40,7 +40,7 @@ public class FilterDTO {
         return lyrics;
     }
 
-    public void setLyrics(String lyrics) {
+    public void setLyrics(final String lyrics) {
         this.lyrics = lyrics;
     }
 
@@ -48,7 +48,7 @@ public class FilterDTO {
         return genre;
     }
 
-    public void setGenre(String genre) {
+    public void setGenre(final String genre) {
         this.genre = genre;
     }
 
@@ -56,7 +56,7 @@ public class FilterDTO {
         return releaseYear;
     }
 
-    public void setReleaseYear(String releaseYear) {
+    public void setReleaseYear(final String releaseYear) {
         this.releaseYear = releaseYear;
     }
 
@@ -64,7 +64,7 @@ public class FilterDTO {
         return artist;
     }
 
-    public void setArtist(String artist) {
+    public void setArtist(final String artist) {
         this.artist = artist;
     }
 
@@ -72,7 +72,7 @@ public class FilterDTO {
         return owner;
     }
 
-    public void setOwner(String owner) {
+    public void setOwner(final String owner) {
         this.owner = owner;
     }
 }

@@ -1,27 +1,71 @@
 [ {
   "command" : "search",
-  "user" : "alice22",
-  "timestamp" : 10,
-  "message" : "Search returned 1 results",
-  "results" : [ "Shape of You" ]
+  "user" : "emily30",
+  "timestamp" : 5,
+  "message" : "Search returned 5 results",
+  "results" : [ "Money Trees", "Big Pimpin'", "Whatever You Need", "Sicko Mode", "Empire State of Mind" ]
 }, {
   "command" : "select",
-  "user" : "alice22",
-  "timestamp" : 15,
-  "message" : "Successfully selected Shape of You."
+  "user" : "emily30",
+  "timestamp" : 10,
+  "message" : "Successfully selected Big Pimpin'."
 }, {
   "command" : "load",
-  "user" : "alice22",
-  "timestamp" : 20,
+  "user" : "emily30",
+  "timestamp" : 15,
   "message" : "Playback loaded successfully."
 }, {
-  "command" : "playPause",
-  "user" : "alice22",
-  "timestamp" : 30,
-  "message" : "Playback paused successfully."
+  "command" : "search",
+  "user" : "emily30",
+  "timestamp" : 25,
+  "message" : "Search returned 1 results",
+  "results" : [ "The Joe Rogan Experience" ]
 }, {
-  "command" : "playPause",
-  "user" : "alice22",
+  "command" : "select",
+  "user" : "emily30",
+  "timestamp" : 30,
+  "message" : "Successfully selected The Joe Rogan Experience."
+}, {
+  "command" : "load",
+  "user" : "emily30",
+  "timestamp" : 31,
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "user" : "emily30",
   "timestamp" : 45,
-  "message" : "Playback resumed successfully."
+  "message" : "Search returned 3 results",
+  "results" : [ "Bohemian Rhapsody", "We Will Rock You", "Radio Ga Ga" ]
+}, {
+  "command" : "search",
+  "user" : "emily30",
+  "timestamp" : 60,
+  "message" : "Search returned 4 results",
+  "results" : [ "The Man", "Freedom", "Castle on the Hill", "Get Lucky" ]
+}, {
+  "command" : "select",
+  "user" : "emily30",
+  "timestamp" : 70,
+  "message" : "Successfully selected Get Lucky."
+}, {
+  "command" : "load",
+  "user" : "emily30",
+  "timestamp" : 71,
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "user" : "emily30",
+  "timestamp" : 75,
+  "message" : "Search returned 0 results",
+  "results" : [ ]
+}, {
+  "command" : "select",
+  "user" : "emily30",
+  "timestamp" : 85,
+  "message" : "Please conduct a search before making a selection."
+}, {
+  "command" : "load",
+  "user" : "emily30",
+  "timestamp" : 86,
+  "message" : "Please select a source before attempting to load."
 } ]

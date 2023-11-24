@@ -8,7 +8,11 @@ import com.fasterxml.jackson.databind.ObjectWriter;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import fileio.input.LibraryInput;
-import myfiles.*;
+import myfiles.SearchbarDTO;
+import myfiles.Podcast;
+import myfiles.Playlist;
+import myfiles.Song;
+import myfiles.Library;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,14 +20,31 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Objects;
-import java.util.Random;
 
-import static myfiles.Playlist.*;
-import static myfiles.Podcast.*;
-import static myfiles.SearchbarDTO.*;
-import static myfiles.Song.*;
+
+import static myfiles.Playlist.filterNamePlaylist;
+import static myfiles.Playlist.sortPlaylist;
+import static myfiles.Playlist.filterOwnerPlaylist;
+import static myfiles.Podcast.sortPodcasts;
+import static myfiles.Podcast.filterNamePodcast;
+import static myfiles.Podcast.filterOwnerPodcast;
+
+import static myfiles.SearchbarDTO.printShuffle;
+import static myfiles.SearchbarDTO.printCUTMR;
+import static myfiles.SearchbarDTO.printSelect;
+import static myfiles.SearchbarDTO.printLoad;
+import static myfiles.SearchbarDTO.printPlayPause;
+import static myfiles.SearchbarDTO.printRepeat;
+import static myfiles.SearchbarDTO.printStatus;
+import static myfiles.Song.filterTags;
+import static myfiles.Song.filterAlbum;
+import static myfiles.Song.filterArtist;
+import static myfiles.Song.sortSongs;
+import static myfiles.Song.filterGenre;
+import static myfiles.Song.filterLyrics;
+import static myfiles.Song.filterName;
+import static myfiles.Song.filterRealeaseYear;
 
 /**
  * The entry point to this homework. It runs the checker that tests your implentation.
@@ -86,16 +107,16 @@ public final class Main {
 
 
         try {
-
             File jsonFile = new File(LIBRARY_PATH);
             Library library = objectMapper.readValue(jsonFile, Library.class);
-
             ArrayList<String> currentSongs = new ArrayList<>();
-            ArrayList<SearchbarDTO> searchbardto = objectMapper.readValue(new File("input/test02_playPause_song.json"), new TypeReference<ArrayList<SearchbarDTO>>() {});
+            ArrayList<SearchbarDTO> searchbardto = objectMapper.readValue(new File(
+                            "input/" + filePath1),
+                    new TypeReference<ArrayList<SearchbarDTO>>() { });
             for (SearchbarDTO search : searchbardto) {
-                if (search.getCommand().equals("search")){
+                if (search.getCommand().equals("search")) {
                     SearchbarDTO.setCurrentType(search.getType());
-                    switch (search.getType()){
+                    switch (search.getType()) {
                         case "song":
                             if (search.getFilters() != null) {
                                 String name = search.getFilters().getName();
@@ -112,20 +133,20 @@ public final class Main {
                                 ArrayList<String> melodiiTMP = new ArrayList<>();
                                 int count = 0;
 
-                                filterName(name,songsEX, songTMP);
-                                filterAlbum(album,songsEX, songTMP);
-                                filterTags(tags,songsEX,songTMP);
-                                filterLyrics(lyrics,songsEX,songTMP);
-                                filterGenre(genre,songsEX,songTMP);
-                                filterRealeaseYear(releaseYear,songsEX,songTMP);
-                                filterArtist(artist,songsEX,songTMP);
-                                sortSongs(songsEX,melodiiTMP,count);
-
+                                filterName(name, songsEX, songTMP);
+                                filterAlbum(album, songsEX, songTMP);
+                                filterTags(tags, songsEX, songTMP);
+                                filterLyrics(lyrics, songsEX, songTMP);
+                                filterGenre(genre, songsEX, songTMP);
+                                filterRealeaseYear(releaseYear, songsEX, songTMP);
+                                filterArtist(artist, songsEX, songTMP);
+                                sortSongs(songsEX, melodiiTMP, count);
                                 currentSongs = new ArrayList<>(melodiiTMP);
 
                                 library.setLastSearchResults(melodiiTMP);
                                 ArrayNode resultsArrayNode = objectMapper.valueToTree(melodiiTMP);
-                                printCUTMR(searchResultNode,search,resultsArrayNode,melodiiTMP,"Search returned " + melodiiTMP.size() + " results");
+                                printCUTMR(searchResultNode, search, resultsArrayNode,
+                                        "Search returned " + melodiiTMP.size() + " results");
                                 outputs.add(searchResultNode);
                             }
                             break;
@@ -135,18 +156,24 @@ public final class Main {
                                 String owner = search.getFilters().getOwner();
 
                                 ObjectNode searchResultNode = objectMapper.createObjectNode();
-                                ArrayList<Podcast> podcastsEX = new ArrayList<>(library.getPodcasts());
+                                ArrayList<Podcast> podcastsEX = new ArrayList<>(
+                                        library.getPodcasts());
                                 ArrayList<Podcast> podcastsTMP = new ArrayList<>();
                                 ArrayList<String> podcasturiFINAL = new ArrayList<>();
                                 int count = 0;
 
-                                filterNamePodcast(name,podcastsEX,podcastsTMP);
-                                filterOwnerPodcast(owner,podcastsEX,podcastsTMP);
-                                sortPodcasts(podcastsEX,podcasturiFINAL,count);
+                                filterNamePodcast(name, podcastsEX, podcastsTMP);
+                                filterOwnerPodcast(owner, podcastsEX, podcastsTMP);
+                                sortPodcasts(podcastsEX, podcasturiFINAL, count);
 
-                                library.setLastSearchResults(podcasturiFINAL);
-                                ArrayNode resultsArrayNode = objectMapper.valueToTree(podcasturiFINAL);
-                                printCUTMR(searchResultNode,search,resultsArrayNode,podcasturiFINAL,"Search returned " + podcasturiFINAL.size() + " results");
+                                library.setLastSearchResults(
+                                        podcasturiFINAL);
+                                ArrayNode resultsArrayNode = objectMapper.valueToTree(
+                                        podcasturiFINAL);
+                                printCUTMR(searchResultNode,
+                                        search,
+                                        resultsArrayNode,
+                                        "Search returned " + podcasturiFINAL.size() + " results");
                                 outputs.add(searchResultNode);
                             }
                             break;
@@ -156,20 +183,27 @@ public final class Main {
                                 String owner = search.getFilters().getOwner();
 
                                 ObjectNode searchResultNode = objectMapper.createObjectNode();
-                                ArrayList<Playlist> playlistsEX = new ArrayList<>(library.getPlaylist());
+                                ArrayList<Playlist> playlistsEX = new ArrayList<>(
+                                        library.getPlaylist());
                                 ArrayList<Playlist> playlistsTMP = new ArrayList<>();
                                 ArrayList<String> playlistFINAL = new ArrayList<>();
                                 int count = 0;
 
-                                filterNamePlaylist(name,playlistsEX,playlistsTMP);
-                                filterOwnerPlaylist(owner,playlistsEX,playlistsTMP);
-                                sortPlaylist(playlistsEX,playlistFINAL,count);
+                                filterNamePlaylist(name, playlistsEX, playlistsTMP);
+                                filterOwnerPlaylist(owner, playlistsEX, playlistsTMP);
+                                sortPlaylist(playlistsEX, playlistFINAL, count);
 
                                 library.setLastSearchResults(playlistFINAL);
-                                ArrayNode resultsArrayNode = objectMapper.valueToTree(playlistFINAL);
-                                printCUTMR(searchResultNode,search,resultsArrayNode,playlistFINAL,"Search returned " + playlistsEX.size() + " results");
+                                ArrayNode resultsArrayNode = objectMapper.valueToTree(
+                                        playlistFINAL);
+                                printCUTMR(searchResultNode,
+                                        search,
+                                        resultsArrayNode,
+                                        "Search returned " + playlistsEX.size() + " results");
                                 outputs.add(searchResultNode);
                             }
+                            break;
+                        default:
                             break;
                     }
                 } else if (search.getCommand().equals("select")) {
@@ -177,64 +211,26 @@ public final class Main {
                     ObjectNode searchResultNode = objectMapper.createObjectNode();
                     printSelect(searchResultNode, library, search, itemNumber);
                     outputs.add(searchResultNode);
-                } else if (search.getCommand().equals("load")){
+                } else if (search.getCommand().equals("load")) {
                     ObjectNode loadResultNode = objectMapper.createObjectNode();
                     printLoad(loadResultNode, library, search);
                     outputs.add(loadResultNode);
-                } else if (search.getCommand().equals("playPause")){
+                } else if (search.getCommand().equals("playPause")) {
                     ObjectNode playPauseResultNode = objectMapper.createObjectNode();
                     printPlayPause(playPauseResultNode, library, search);
                     outputs.add(playPauseResultNode);
-                } else if (search.getCommand().equals("repeat")){
+                } else if (search.getCommand().equals("repeat")) {
                     ObjectNode repeatNode = objectMapper.createObjectNode();
                     printRepeat(repeatNode, library, search);
                     outputs.add(repeatNode);
-                } else if (search.getCommand().equals("shuffle")){
+                } else if (search.getCommand().equals("shuffle")) {
                     ObjectNode shuffleNode = objectMapper.createObjectNode();
-                   if (SearchbarDTO.getCurrentType().equals("playlist")){
-                       if (SearchbarDTO.isIsLoaded()) {
-                           int shuffle = library.getShuffle() + 1;
-                           if (search.getSeed() != null) {
-                               SearchbarDTO.setCurrentSeed(search.getSeed());
-                           }
-                           Random random = new Random(SearchbarDTO.getCurrentSeed());
-                           if (shuffle == 0) {
-                               shuffleNode.put("command", search.getCommand());
-                               shuffleNode.put("user", search.getUsername());
-                               shuffleNode.put("timestamp", search.getTimestamp());
-                               shuffleNode.put("message", "Shuffle function deactivated successfully.");
-
-                           } else if (shuffle == 1) {
-                               shuffleNode.put("command", search.getCommand());
-                               shuffleNode.put("user", search.getUsername());
-                               shuffleNode.put("timestamp", search.getTimestamp());
-                               shuffleNode.put("message", "Shuffle function deactivated successfully.");
-                               Collections.shuffle(currentSongs, random);
-                           }
-                       } else {
-                           shuffleNode.put("command", search.getCommand());
-                           shuffleNode.put("user", search.getUsername());
-                           shuffleNode.put("timestamp", search.getTimestamp());
-                           shuffleNode.put("message", "Please load a source before using the shuffle function.");
-                       }
-                   } else {
-                       shuffleNode.put("command", search.getCommand());
-                       shuffleNode.put("user", search.getUsername());
-                       shuffleNode.put("timestamp", search.getTimestamp());
-                       shuffleNode.put("message", "The loaded source is not a playlist.");
-                   }
-                } else if(search.getCommand().equals("status")){
+                    printShuffle(shuffleNode, search, library, currentSongs);
+                } else if (search.getCommand().equals("status")) {
                     ObjectNode statusNode = objectMapper.createObjectNode();
                     ObjectNode statsNode = objectMapper.createObjectNode();
-                    statusNode.put("command", search.getCommand());
-                    statusNode.put("user", search.getUsername());
-                    statusNode.put("timestamp", search.getTimestamp());
-                    statsNode.put("name", SearchbarDTO.getCurrentSong());
-                    statsNode.put("remainedTime", "");
-                    statsNode.put("repeat", "No Repeat");
-                    statsNode.put("shuffle", false);
-                    statsNode.put("paused", false);
-                    statusNode.put("stats", "");
+                    printStatus(statusNode, statsNode, search);
+                    outputs.add(statusNode);
                 }
             }
 

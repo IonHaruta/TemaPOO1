@@ -3,25 +3,166 @@
   "user" : "alice22",
   "timestamp" : 10,
   "message" : "Search returned 1 results",
-  "results" : [ "Shape of You" ]
+  "results" : [ "TED Radio Hour" ]
 }, {
   "command" : "select",
   "user" : "alice22",
   "timestamp" : 15,
-  "message" : "Successfully selected Shape of You."
+  "message" : "Successfully selected TED Radio Hour."
 }, {
   "command" : "load",
   "user" : "alice22",
   "timestamp" : 20,
   "message" : "Playback loaded successfully."
 }, {
-  "command" : "playPause",
+  "command" : "status",
   "user" : "alice22",
-  "timestamp" : 30,
-  "message" : "Playback paused successfully."
+  "timestamp" : 59,
+  "stats" : {
+    "name" : "TED Radio Hour",
+    "remainedTime" : 194,
+    "repeat" : "No Repeat",
+    "shuffle" : false,
+    "paused" : false
+  }
+}, {
+  "command" : "search",
+  "user" : "alice22",
+  "timestamp" : 60,
+  "message" : "Search returned 1 results",
+  "results" : [ "Stairway to Heaven" ]
+}, {
+  "command" : "select",
+  "user" : "alice22",
+  "timestamp" : 65,
+  "message" : "Successfully selected Stairway to Heaven."
+}, {
+  "command" : "load",
+  "user" : "alice22",
+  "timestamp" : 70,
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "user" : "alice22",
+  "timestamp" : 75,
+  "message" : "Search returned 1 results",
+  "results" : [ "TED Radio Hour" ]
+}, {
+  "command" : "select",
+  "user" : "alice22",
+  "timestamp" : 80,
+  "message" : "Successfully selected TED Radio Hour."
+}, {
+  "command" : "load",
+  "user" : "alice22",
+  "timestamp" : 85,
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "status",
+  "user" : "alice22",
+  "timestamp" : 86,
+  "stats" : {
+    "name" : "TED Radio Hour",
+    "remainedTime" : 232,
+    "repeat" : "No Repeat",
+    "shuffle" : false,
+    "paused" : false
+  }
 }, {
   "command" : "playPause",
   "user" : "alice22",
-  "timestamp" : 45,
-  "message" : "Playback resumed successfully."
+  "timestamp" : 3200,
+  "message" : "Playback paused successfully."
+}, {
+  "command" : "status",
+  "user" : "alice22",
+  "timestamp" : 3201,
+  "stats" : {
+    "name" : "TED Radio Hour",
+    "remainedTime" : 227,
+    "repeat" : "No Repeat",
+    "shuffle" : false,
+    "paused" : true
+  }
+}, {
+  "command" : "search",
+  "user" : "alice22",
+  "timestamp" : 3215,
+  "message" : "Search returned 2 results",
+  "results" : [ "Freedom", "Freedom" ]
+}, {
+  "command" : "select",
+  "user" : "alice22",
+  "timestamp" : 3220,
+  "message" : "Successfully selected Freedom."
+}, {
+  "command" : "load",
+  "user" : "alice22",
+  "timestamp" : 3225,
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "user" : "alice22",
+  "timestamp" : 3235,
+  "message" : "Search returned 1 results",
+  "results" : [ "Happier" ]
+}, {
+  "command" : "select",
+  "user" : "alice22",
+  "timestamp" : 3240,
+  "message" : "Successfully selected Happier."
+}, {
+  "command" : "load",
+  "user" : "alice22",
+  "timestamp" : 3245,
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "user" : "alice22",
+  "timestamp" : 3255,
+  "message" : "Search returned 0 results",
+  "results" : [ ]
+}, {
+  "command" : "select",
+  "user" : "alice22",
+  "timestamp" : 3260,
+  "message" : "Please conduct a search before making a selection."
+}, {
+  "command" : "load",
+  "user" : "alice22",
+  "timestamp" : 3265,
+  "message" : "Please select a source before attempting to load."
+}, {
+  "command" : "status",
+  "user" : "alice22",
+  "timestamp" : 3270,
+  "stats" : {
+    "name" : "Happier",
+    "remainedTime" : 233,
+    "repeat" : "No Repeat",
+    "shuffle" : false,
+    "paused" : true
+  }
+}, {
+  "command" : "status",
+  "user" : "alice22",
+  "timestamp" : 3448,
+  "stats" : {
+    "name" : "Happier",
+    "remainedTime" : 233,
+    "repeat" : "No Repeat",
+    "shuffle" : false,
+    "paused" : true
+  }
+}, {
+  "command" : "status",
+  "user" : "alice22",
+  "timestamp" : 4000,
+  "stats" : {
+    "name" : "Happier",
+    "remainedTime" : 233,
+    "repeat" : "No Repeat",
+    "shuffle" : false,
+    "paused" : true
+  }
 } ]

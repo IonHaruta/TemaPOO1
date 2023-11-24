@@ -10,7 +10,6 @@ public final class Library {
     private ArrayList<Playlist> playlist = new ArrayList<>();
     private ArrayList<String> lastSearchResults = new ArrayList<>();
     private Integer itemNumber;
-    private Boolean playPause = true;
     private Integer repeat = 0;
     private Integer shuffle = 0;
     private ArrayList<String> currentSongs;
@@ -19,7 +18,7 @@ public final class Library {
         return currentSongs;
     }
 
-    public void setCurrentSongs(ArrayList<String> currentSongs) {
+    public void setCurrentSongs(final ArrayList<String> currentSongs) {
         this.currentSongs = currentSongs;
     }
 
@@ -27,7 +26,7 @@ public final class Library {
         return shuffle;
     }
 
-    public void setShuffle(Integer shuffle) {
+    public void setShuffle(final Integer shuffle) {
         this.shuffle = shuffle;
     }
 
@@ -35,23 +34,16 @@ public final class Library {
         return repeat;
     }
 
-    public void setRepeat(Integer repeat) {
+    public void setRepeat(final Integer repeat) {
         this.repeat = repeat;
     }
 
-    public Boolean getPlayPause() {
-        return playPause;
-    }
-
-    public void setPlayPause(Boolean playPause) {
-        this.playPause = playPause;
-    }
 
     public ArrayList<String> getLastSearchResults() {
         return lastSearchResults;
     }
 
-    public void setLastSearchResults(ArrayList<String> lastSearchResults) {
+    public void setLastSearchResults(final ArrayList<String> lastSearchResults) {
         this.lastSearchResults = lastSearchResults;
     }
 
@@ -59,7 +51,7 @@ public final class Library {
         return itemNumber;
     }
 
-    public void setItemNumber(Integer itemNumber) {
+    public void setItemNumber(final Integer itemNumber) {
         this.itemNumber = itemNumber;
     }
 
@@ -67,7 +59,7 @@ public final class Library {
         return playlist;
     }
 
-    public void setPlaylist(ArrayList<Playlist> playlist) {
+    public void setPlaylist(final ArrayList<Playlist> playlist) {
         this.playlist = playlist;
     }
 
@@ -75,7 +67,7 @@ public final class Library {
         return commands;
     }
 
-    public void setCommands(ArrayList<Command> commands) {
+    public void setCommands(final ArrayList<Command> commands) {
         this.commands = commands;
     }
 

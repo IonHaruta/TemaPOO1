@@ -3,25 +3,42 @@
   "user" : "alice22",
   "timestamp" : 10,
   "message" : "Search returned 1 results",
-  "results" : [ "Shape of You" ]
+  "results" : [ "Stairway to Heaven" ]
 }, {
   "command" : "select",
   "user" : "alice22",
   "timestamp" : 15,
-  "message" : "Successfully selected Shape of You."
+  "message" : "Successfully selected Stairway to Heaven."
 }, {
   "command" : "load",
   "user" : "alice22",
   "timestamp" : 20,
   "message" : "Playback loaded successfully."
 }, {
-  "command" : "playPause",
+  "command" : "search",
   "user" : "alice22",
   "timestamp" : 30,
-  "message" : "Playback paused successfully."
+  "message" : "Search returned 1 results",
+  "results" : [ "The Unforgiven" ]
 }, {
-  "command" : "playPause",
+  "command" : "select",
   "user" : "alice22",
-  "timestamp" : 45,
-  "message" : "Playback resumed successfully."
+  "timestamp" : 35,
+  "message" : "Successfully selected The Unforgiven."
+}, {
+  "command" : "load",
+  "user" : "alice22",
+  "timestamp" : 40,
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "search",
+  "user" : "alice22",
+  "timestamp" : 63,
+  "message" : "Search returned 0 results",
+  "results" : [ ]
+}, {
+  "command" : "select",
+  "user" : "alice22",
+  "timestamp" : 64,
+  "message" : "Please conduct a search before making a selection."
 } ]

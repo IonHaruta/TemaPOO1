@@ -1,6 +1,6 @@
 package myfiles;
 
-public class Status {
+public final class Status {
     private String name;
     private Integer remainedTime;
     private String repeat;
@@ -11,7 +11,7 @@ public class Status {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(final String name) {
         this.name = name;
     }
 
@@ -19,7 +19,7 @@ public class Status {
         return remainedTime;
     }
 
-    public void setRemainedTime(Integer remainedTime) {
+    public void setRemainedTime(final Integer remainedTime) {
         this.remainedTime = remainedTime;
     }
 
@@ -27,7 +27,7 @@ public class Status {
         return repeat;
     }
 
-    public void setRepeat(String repeat) {
+    public void setRepeat(final String repeat) {
         this.repeat = repeat;
     }
 
@@ -35,7 +35,7 @@ public class Status {
         return shuffle;
     }
 
-    public void setShuffle(Boolean shuffle) {
+    public void setShuffle(final Boolean shuffle) {
         this.shuffle = shuffle;
     }
 
@@ -43,7 +43,7 @@ public class Status {
         return paused;
     }
 
-    public void setPaused(Boolean paused) {
+    public void setPaused(final Boolean paused) {
         this.paused = paused;
     }
 }
